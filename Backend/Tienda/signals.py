@@ -13,7 +13,7 @@ def crear_roles(sender, **kwargs):
 
         # Asignar permisos (Ejemplo: para los empleados)
         if role == 'Empleado':
-            permisos = Permission.objects.filter(content_type__app_label='store')
+            permisos = Permission.objects.filter(content_type__app_label='Tienda')
             group.permissions.set(permisos)
         elif role == 'Cliente':
             # Los clientes no tendrán permisos administrativos
